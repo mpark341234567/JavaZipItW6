@@ -48,6 +48,13 @@ public class ZipTest {
         assertEquals(expected, Zip.zipLists(list1, list2));
     }
     @Test
+    void testZipListsWithDifferentSizes3() {
+        List<String> list1 = List.of("z", "a", "b");
+        List<String> list2 = List.of("x");
+        List<String> expected = List.of("z", "x", "a", "b");
+        assertEquals(expected, Zip.zipLists(list1, list2));
+    }
+    @Test
     void testZipListsWithEmptyList() {
         List<Integer> list1 = List.of();
         List<Integer> list2 = List.of(1, 2, 3);

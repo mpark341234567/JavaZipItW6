@@ -22,5 +22,6 @@ public class App {
         List<String> mergedWords = zipLists(colors1, colors2);
         System.out.println(mergedWords); // ["Red", "White", "Green", "Black", "Blue", "Orange", "Pink", "Fuschia"]
 
+        //List<Object> mixedList1 = zipLists(nums1, colors1);
     }
 }
