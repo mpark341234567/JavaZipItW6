@@ -20,6 +20,20 @@ public class ZipTest {
         assertEquals(expected, Zip.zipLists(list1, list2));
     }
     @Test
+    void testZipListsWithSameType3() {
+        List<Character> list1 = List.of('X', '3', 'A');
+        List<Character> list2 = List.of('O', '4', '&');
+        List<Character> expected = List.of('X', 'O', '3', '4', 'A', '&');
+        assertEquals(expected, Zip.zipLists(list1, list2));
+    }
+    @Test
+    void testZipListsWithSameType4() {
+        List<Double> list1 = List.of(1.1, 2.2);
+        List<Double> list2 = List.of(3.3, 4.4, 5.5);
+        List<Double> expected = List.of(1.1, 3.3, 2.2, 4.4, 5.5);
+        assertEquals(expected, Zip.zipLists(list1, list2));
+    }
+    @Test
     void testZipListsWithDifferentSizes() {
         List<Integer> list1 = List.of(1, 2);
         List<Integer> list2 = List.of(3, 4, 5);
